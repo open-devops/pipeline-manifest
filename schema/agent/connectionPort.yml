@@ -8,11 +8,9 @@ type:
 properties:
   process:
     name: process
-    type: 
-    - "$ref": "component.json" 
-    description: The component of connection endpoint
+    type: string
+    description: The component name of connection endpoint
   port:
     name: port
-    type: 
-    - "$ref": "port.json" 
-    description: The component port of connection endpoint
+    type: string
+    description: The component port name of connection endpoint

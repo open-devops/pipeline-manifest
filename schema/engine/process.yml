@@ -31,18 +31,18 @@ properties:
     type: boolean
     description: Whether the Process can be executed as process
     example: true
-  inputs:
-    name: inputs
+  triggers:
+    name: triggers
     type: array
-    description: Definition of Process input operations
+    description: Definition of Process input trigger operations
     minItems: 0
     uniqueItems: true
     items:
       "$ref": "operation.json"
-  outputs:
-    name: outputs
+  results:
+    name: results
     type: array
-    description: Definition of Process output operations
+    description: Definition of Process output result operations
     minItems: 0
     uniqueItems: true
     items:

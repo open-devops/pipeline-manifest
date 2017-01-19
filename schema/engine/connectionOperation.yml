@@ -8,11 +8,9 @@ type:
 properties:
   process:
     name: process
-    type: 
-    - "$ref": "process.json" 
-    description: The process of connection endpoint
+    type: string
+    description: The process name of connection endpoint
   operation:
     name: operation
-    type: 
-    - "$ref": "operation.json" 
-    description: The process operation of connection endpoint
+    type: string
+    description: The process operation name of connection endpoint
