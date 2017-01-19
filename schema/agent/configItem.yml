@@ -1,0 +1,28 @@
+---
+id: configItem.json
+"$schema": "http://json-schema.org/draft-04/schema"
+title: Config Item
+description: ""
+type:
+- object
+properties:
+  key:
+    name: key
+    type: string
+    description: The key of config item
+    example: git_url
+  value:
+    name: value
+    type: string
+    description: The value of config item
+    example: https://github.com/paas/caas.git
+  label:
+    name: label
+    type: string
+    description: The label of config item
+    example: Git URL
+  description:
+    name: description
+    type: string
+    description: Longer textual description of the key
+    example: Git url of source code to be build

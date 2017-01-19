@@ -1,0 +1,28 @@
+---
+id: scheduler.json
+"$schema": "http://json-schema.org/draft-04/schema"
+title: Scheduler definition
+description: ""
+type:
+- object
+properties:
+  strategy:
+    name: strategy
+    lable: Scheduling Strategy
+    type: enum [Timer driven|CRON driven]
+    description: The strategy used to schedule the process
+    example: Timer driven
+  schedule:
+    name: schedule
+    lable: Run Schedule
+    type: string
+    description: The amount of time that should elapse between task exectuions or 
+                 The CRON expression that defines when the process should run.
+    example: 0 sec | * * * * * ?
+  concurrent:
+    name: concurrent
+    lable: Concurrent Tasks 
+    type: positiveInteger
+    default: 1
+    description: The number of tasks that should be concurrently scheduled for this process.
+    example: 1

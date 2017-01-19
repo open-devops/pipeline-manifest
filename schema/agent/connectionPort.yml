@@ -1,0 +1,18 @@
+---
+id: connectionPort.json
+"$schema": "http://json-schema.org/draft-04/schema"
+title: Component Connection Port
+description: ""
+type:
+- object
+properties:
+  process:
+    name: process
+    type: 
+    - "$ref": "component.json" 
+    description: The component of connection endpoint
+  port:
+    name: port
+    type: 
+    - "$ref": "port.json" 
+    description: The component port of connection endpoint

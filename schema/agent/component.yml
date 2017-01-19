@@ -1,0 +1,58 @@
+---
+id: component.json
+"$schema": "http://json-schema.org/draft-04/schema"
+title: Component definition
+description: ""
+type:
+- object
+properties:
+  name:
+    name: name
+    type: string
+    description: Component name
+    example: BuildSource
+  lable:
+    name: lable
+    type: string
+    description: Component lable
+    example: Build Source Code
+  description:
+    name: description
+    type: string
+    description: Longer textual description of the component
+    example: Build source code with build scripts
+  enabled:
+    name: enabled
+    type: boolean
+    description: Whether the component can be executed as process
+    example: true
+  inports:
+    name: inports
+    type: array
+    description: Definition of component inports
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "port.json"
+  outports:
+    name: outports
+    type: array
+    description: Definition of component outports
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "port.json"
+  scheduler:
+    name: scheduler
+    type: 
+    - "$ref": "scheduler.json"
+    description: Schedule control setting of component
+  configItems:
+    name: configItems
+    type: array
+    description: Configuration Items of component
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "configItem.json"
+required: [name]

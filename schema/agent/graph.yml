@@ -1,0 +1,54 @@
+---
+id: graph.json
+"$schema": "http://json-schema.org/draft-04/schema"
+title: Graph definition
+description: ""
+type:
+- object
+properties:
+  name:
+    name: name
+    type: string
+    description: Graph name
+    example: 'Release Pipeline'
+  description:
+    name: description
+    type: string
+    description: Longer textual description of the module
+    example: 'Release Automatiohn Pipeline'
+  runtime:
+    name: runtime
+    type: string
+    description: FBP runtime the module is for
+    example: 'pipeline-engine'
+  inports:
+    name: inports
+    type: array
+    description: Definition of graph inports
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "port.json"
+  outports:
+    name: outports
+    type: array
+    description: Definition of graph outports
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "port.json"
+  components:
+    name: components
+    description: Components provided by the graph
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "component.json"
+  connections:
+    name: connections
+    description: Connections provided by the graph
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "connection.json" 
+required: [name,runtime,components,connections]
