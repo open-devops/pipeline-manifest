@@ -1,0 +1,18 @@
+---
+id: connection.json
+"$schema": "http://json-schema.org/draft-04/schema"
+title: Component Connection
+description: ""
+type:
+- object
+properties:
+  src:
+    name: src
+    type: 
+    - "$ref": "connectionPort.json" 
+    description: The source connection between components
+  tgt:
+    name: tgt
+    type: 
+    - "$ref": "connectionPort.json" 
+    description: The target connection between components

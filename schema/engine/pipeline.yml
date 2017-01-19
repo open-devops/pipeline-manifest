@@ -1,7 +1,7 @@
 ---
-id: graph.json
+id: pipeline.json
 "$schema": "http://json-schema.org/draft-04/schema"
-title: Graph definition
+title: Pipeline definition
 description: ""
 type:
 - object
@@ -9,46 +9,41 @@ properties:
   name:
     name: name
     type: string
-    description: Graph name
+    description: Pipeline name
     example: 'Release Pipeline'
   description:
     name: description
     type: string
     description: Longer textual description of the module
     example: 'Release Automatiohn Pipeline'
-  runtime:
-    name: runtime
-    type: string
-    description: FBP runtime the graph is for
-    example: 'pipeline-engine'
-  inports:
-    name: inports
+  inputs:
+    name: inputs
     type: array
-    description: Definition of graph inports
+    description: Definition of Pipeline input operations
     minItems: 0
     uniqueItems: true
     items:
-      "$ref": "port.json"
-  outports:
-    name: outports
+      "$ref": "operation.json"
+  outputs:
+    name: outputs
     type: array
-    description: Definition of graph outports
+    description: Definition of Pipeline output operations
     minItems: 0
     uniqueItems: true
     items:
-      "$ref": "port.json"
-  components:
-    name: components
-    description: Components provided by the graph
+      "$ref": "operation.json"
+  processes:
+    name: processes
+    description: Processes provided by the Pipeline
     minItems: 0
     uniqueItems: true
     items:
-      "$ref": "component.json"
+      "$ref": "process.json"
   connections:
     name: connections
-    description: Connections provided by the graph
+    description: Connections provided by the Pipeline
     minItems: 0
     uniqueItems: true
     items:
       "$ref": "connection.json" 
-required: [name,runtime,components,connections]
+required: [name,processes,connections]

@@ -1,0 +1,63 @@
+---
+id: process.json
+"$schema": "http://json-schema.org/draft-04/schema"
+title: Process definition
+description: ""
+type:
+- object
+properties:
+  id:
+    name: id
+    type: string
+    description: Process ID
+    example: PI101
+  name:
+    name: name
+    type: string
+    description: Process name
+    example: BuildSource
+  lable:
+    name: lable
+    type: string
+    description: Process lable
+    example: Build Source Code
+  description:
+    name: description
+    type: string
+    description: Longer textual description of the Process
+    example: Build source code with build scripts
+  enabled:
+    name: enabled
+    type: boolean
+    description: Whether the Process can be executed as process
+    example: true
+  inputs:
+    name: inputs
+    type: array
+    description: Definition of Process input operations
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "operation.json"
+  outputs:
+    name: outputs
+    type: array
+    description: Definition of Process output operations
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "operation.json"
+  scheduler:
+    name: scheduler
+    type: 
+    - "$ref": "scheduler.json"
+    description: Schedule control setting of Process
+  configItems:
+    name: configItems
+    type: array
+    description: Configuration Items of Process
+    minItems: 0
+    uniqueItems: true
+    items:
+      "$ref": "configItem.json"
+required: [name]

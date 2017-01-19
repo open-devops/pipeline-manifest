@@ -1,0 +1,18 @@
+---
+id: connectionOperation.json
+"$schema": "http://json-schema.org/draft-04/schema"
+title: Process Connection Operation
+description: ""
+type:
+- object
+properties:
+  process:
+    name: process
+    type: 
+    - "$ref": "process.json" 
+    description: The process of connection endpoint
+  operation:
+    name: operation
+    type: 
+    - "$ref": "operation.json" 
+    description: The process operation of connection endpoint
