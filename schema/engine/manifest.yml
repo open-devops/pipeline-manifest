@@ -9,17 +9,17 @@ properties:
   main:
     name: main
     type: object
-    description: Setup for the main graph of the project
-    "$ref": "graph.json"
+    description: Setup for the main pipeline of the project
+    "$ref": "pipeline.json"
   version:
     name: version
     type: number
     description: Manifest version
-  graphs:
-    description: graphs available
+  pipelines:
+    description: pipelines available
     type: array
     minItems: 0
     uniqueItems: true
     items:
-      "$ref": "graph.json"
-required: [version,graphs]
+      "$ref": "pipeline.json"
+required: [version,pipelines]
