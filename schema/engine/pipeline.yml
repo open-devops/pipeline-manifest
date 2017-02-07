@@ -16,18 +16,18 @@ properties:
     type: string
     description: Longer textual description of the module
     example: 'Release Automatiohn Pipeline'
-  inputs:
-    name: inputs
+  triggers:
+    name: triggers
     type: array
-    description: Definition of Pipeline input operations
+    description: Definition of Pipeline input trigger operations
     minItems: 0
     uniqueItems: true
     items:
       "$ref": "operation.json"
-  outputs:
-    name: outputs
+  results:
+    name: results
     type: array
-    description: Definition of Pipeline output operations
+    description: Definition of Pipeline output result operations
     minItems: 0
     uniqueItems: true
     items:
