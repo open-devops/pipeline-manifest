@@ -21,22 +21,9 @@ properties:
     type: string
     description: Port datatype
     example: string
-  addressable:
-    name: addressable
-    type: boolean
-    description: Whether the port is an addressable ArrayPort
-    example: false
   required:
     name: required
     type: boolean
     description: Whether the port needs to be connected for the component to work
     example: false
-  configItems:
-    name: configItems
-    type: array
-    description: Configuration Items of component
-    minItems: 0
-    uniqueItems: true
-    items:
-      "$ref": "configItem.json"
-required: [name,type,addressable]
+required: [name,type]

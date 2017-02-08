@@ -37,9 +37,9 @@ properties:
     uniqueItems: true
     items:
       "$ref": "port.json"
-  components:
-    name: components
-    description: Components provided by the graph
+  processes:
+    name: processes
+    description: Process Components provided by the graph
     minItems: 0
     uniqueItems: true
     items:
