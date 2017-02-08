@@ -13,9 +13,14 @@ properties:
     example: git_url
   value:
     name: value
-    type: string
+    type: object
     description: The value of config item
     example: https://github.com/paas/caas.git
+  type:
+    name: type
+    type: string
+    description: The data type of value
+    example: string
   label:
     name: label
     type: string

@@ -15,23 +15,15 @@ properties:
     name: description
     type: string
     description: Longer textual description of the port
-    example: Input YAML to be converted
+    example: Fetch source code and build with maven
   type:
     name: type
     type: string
     description: Port datatype
-    example: string
+    example: operation
   required:
     name: required
     type: boolean
     description: Whether the port needs to be connected for the component to work
     example: false
-  configItems:
-    name: configItems
-    type: array
-    description: Configuration Items of component
-    minItems: 0
-    uniqueItems: true
-    items:
-      "$ref": "configItem.json"
 required: [name,type]
